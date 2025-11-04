@@ -110,7 +110,7 @@ export default function FeesPage() {
       <section className="py-12 px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="bg-gradient-to-br from-amber-600 to-orange-600 rounded-2xl shadow-xl p-8 md:p-12 text-white">
-            <h2 className="text-3xl font-bold mb-6 text-center">What's Included</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">What&apos;s Included</h2>
             
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-start gap-3">
@@ -199,7 +199,7 @@ export default function FeesPage() {
               <div className="flex items-start gap-3 p-4 bg-purple-50 rounded-lg">
                 <span className="text-purple-600 text-xl mt-1">🎓</span>
                 <p>
-                  <strong>Certification:</strong> Upon successful completion and examination, you'll receive 
+                  <strong>Certification:</strong> Upon successful completion and examination, you&apos;ll receive 
                   an official certificate from Landour Language School.
                 </p>
               </div>

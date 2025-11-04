@@ -24,7 +24,7 @@ export default function AboutPage() {
             <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
               <p>
                 Landour Language School is nestled in the serene hills of <strong>Landour, Mussoorie</strong> — 
-                a charming suburb of the famous hill station known as the <em>"Queen of the Hills"</em>.
+                a charming suburb of the famous hill station known as the <em>&quot;Queen of the Hills&quot;</em>.
               </p>
               
               <p>
@@ -74,7 +74,7 @@ export default function AboutPage() {
               strong foundation in grammar and vocabulary.
             </p>
             <p className="text-lg leading-relaxed">
-              Whether you're learning Hindi for travel, work, cultural exploration, or academic purposes, 
+              Whether you&apos;re learning Hindi for travel, work, cultural exploration, or academic purposes, 
               our personalized approach ensures you achieve your language goals effectively.
             </p>
           </div>

@@ -187,7 +187,7 @@ export default function CoursesPage() {
               </p>
               <p className="flex items-start gap-3">
                 <span className="text-amber-600 text-xl mt-1">•</span>
-                <span>The school's own <strong>textbook is a required component</strong> for Hindi instruction.</span>
+                <span>The school&apos;s own <strong>textbook is a required component</strong> for Hindi instruction.</span>
               </p>
               <p className="flex items-start gap-3">
                 <span className="text-amber-600 text-xl mt-1">•</span>
