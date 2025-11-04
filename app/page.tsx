@@ -1,360 +1,228 @@
+﻿import Link from "next/link";
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 to-white">
-      {/* Header/Nav */}
-      <nav className="bg-white shadow-md sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex justify-between items-center">
-            <div>
-              <h1 className="text-2xl md:text-3xl font-bold text-amber-900">Landour Language School</h1>
-              <p className="text-sm text-gray-600">📍 Landour, Mussoorie</p>
-            </div>
-            <div className="hidden md:flex gap-6">
-              <a href="#courses" className="text-gray-700 hover:text-amber-700 transition">Courses</a>
-              <a href="#schedule" className="text-gray-700 hover:text-amber-700 transition">Schedule</a>
-              <a href="#fees" className="text-gray-700 hover:text-amber-700 transition">Fees</a>
-              <a href="#accommodation" className="text-gray-700 hover:text-amber-700 transition">Accommodation</a>
-              <a href="#contact" className="text-gray-700 hover:text-amber-700 transition">Contact</a>
-            </div>
-          </div>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-white">
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-amber-600 to-orange-500 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">Welcome to Landour Language School</h2>
-          <p className="text-xl md:text-2xl mb-4">Learn Hindi and More in the Queen of the Hills</p>
-          <p className="text-lg mb-8 max-w-3xl mx-auto">
-            Landour is a suburb of Mussoorie, a famous hill station in India widely known as the "Queen of the Hills."
-            Our school is situated in the Lal Tibba area within the Landour Cantonment, with classes held on the premises of the Kellogg Memorial Church.
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+        <div className="absolute top-0 left-0 w-full h-full opacity-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-amber-500 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-500 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="text-center">
+            <div className="inline-block mb-4 px-4 py-2 bg-amber-100 rounded-full">
+              <span className="text-amber-800 font-semibold"> Learn in the Himalayas</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 mb-6 leading-tight">
+              Landour Language School
+            </h1>
+            
+            <div className="flex items-center justify-center gap-2 text-lg md:text-xl text-gray-600 mb-8">
+              <span className="text-2xl"></span>
+              <p>Landour, Mussoorie - Queen of the Hills</p>
+            </div>
+            
+            <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto mb-12 leading-relaxed">
+              Master Hindi, Urdu, Garhwali, Punjabi, and Sanskrit in the peaceful Himalayan foothills
+            </p>
+            
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link 
+                href="/courses" 
+                className="group bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-amber-700 hover:to-orange-700 transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl"
+              >
+                Explore Courses
+                <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform"></span>
+              </Link>
+              <Link 
+                href="/contact" 
+                className="bg-white text-amber-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-amber-50 transition-all transform hover:scale-105 shadow-xl hover:shadow-2xl border-2 border-amber-600"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-6 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div className="p-6">
+              <div className="text-4xl font-bold text-amber-600 mb-2">12+</div>
+              <p className="text-gray-600">Weeks Programs</p>
+            </div>
+            <div className="p-6">
+              <div className="text-4xl font-bold text-amber-600 mb-2">240+</div>
+              <p className="text-gray-600">Class Hours</p>
+            </div>
+            <div className="p-6">
+              <div className="text-4xl font-bold text-amber-600 mb-2">5+</div>
+              <p className="text-gray-600">Languages</p>
+            </div>
+            <div className="p-6">
+              <div className="text-4xl font-bold text-amber-600 mb-2">50+</div>
+              <p className="text-gray-600">Years Experience</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-6 bg-gradient-to-b from-white to-amber-50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Why Choose Us
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Experience authentic language learning in a serene mountain setting
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Instructors</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Learn from experienced teachers with decades of language teaching expertise and proven methodologies.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Peaceful Environment</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Study in the serene Himalayan foothills, away from city distractions, perfect for focused learning.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Flexible Programs</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Choose from full-time, part-time, and online options designed to fit your schedule and goals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Courses Preview */}
+      <section className="py-20 px-6 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Courses</h2>
+            <p className="text-xl text-gray-600">Choose from our comprehensive language programs</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl shadow-xl p-8 text-white transform hover:scale-105 transition-all">
+              <div className="text-5xl mb-4"></div>
+              <h3 className="text-3xl font-bold mb-3">Hindi</h3>
+              <p className="text-blue-100 mb-6">Introductory, Intermediate & Intensive courses</p>
+              <ul className="space-y-2 text-blue-50 mb-6">
+                <li className="flex items-center gap-2">
+                  <span></span>
+                  <span>6-12 week programs</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span></span>
+                  <span>120-240 class hours</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span></span>
+                  <span>All skill levels</span>
+                </li>
+              </ul>
+              <Link href="/courses" className="inline-block bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition">
+                Learn More
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-3xl shadow-xl p-8 text-white transform hover:scale-105 transition-all">
+              <div className="text-5xl mb-4"></div>
+              <h3 className="text-3xl font-bold mb-3">Urdu</h3>
+              <p className="text-purple-100 mb-6">Language of poetry and culture</p>
+              <ul className="space-y-2 text-purple-50 mb-6">
+                <li className="flex items-center gap-2">
+                  <span></span>
+                  <span>Customizable duration</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span></span>
+                  <span>Reading & writing</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span></span>
+                  <span>Literary focus</span>
+                </li>
+              </ul>
+              <Link href="/courses" className="inline-block bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-purple-50 transition">
+                Learn More
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-3xl shadow-xl p-8 text-white transform hover:scale-105 transition-all">
+              <div className="text-5xl mb-4"></div>
+              <h3 className="text-3xl font-bold mb-3">Regional</h3>
+              <p className="text-green-100 mb-6">Garhwali, Punjabi & Sanskrit</p>
+              <ul className="space-y-2 text-green-50 mb-6">
+                <li className="flex items-center gap-2">
+                  <span></span>
+                  <span>Cultural immersion</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span></span>
+                  <span>Local expertise</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span></span>
+                  <span>Flexible schedules</span>
+                </li>
+              </ul>
+              <Link href="/courses" className="inline-block bg-white text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-green-50 transition">
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-6 bg-gradient-to-r from-amber-600 via-orange-600 to-red-600">
+        <div className="container mx-auto max-w-4xl text-center text-white">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Start Your Journey?</h2>
+          <p className="text-xl md:text-2xl text-amber-100 mb-10 leading-relaxed">
+            Join students from around the world learning languages in the heart of the Himalayas
           </p>
-          <a href="#contact" className="inline-block bg-white text-amber-700 font-semibold px-8 py-3 rounded-full hover:bg-amber-50 transition shadow-lg">
-            Get in Touch
-          </a>
-        </div>
-      </section>
-
-      {/* Courses Section */}
-      <section id="courses" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 text-amber-900">🎓 Courses Offered</h2>
-          
-          {/* Hindi Courses */}
-          <div className="mb-12">
-            <h3 className="text-3xl font-semibold mb-6 text-gray-800">📘 Hindi Courses</h3>
-            <div className="overflow-x-auto shadow-lg rounded-lg">
-              <table className="min-w-full bg-white border border-gray-200">
-                <thead className="bg-amber-700 text-white">
-                  <tr>
-                    <th className="py-3 px-6 text-left">Course</th>
-                    <th className="py-3 px-6 text-left">Duration</th>
-                    <th className="py-3 px-6 text-left">Class Hours</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b hover:bg-amber-50 transition">
-                    <td className="py-4 px-6">Introductory Hindi Course</td>
-                    <td className="py-4 px-6">12 Weeks</td>
-                    <td className="py-4 px-6">240 Class Instructions</td>
-                  </tr>
-                  <tr className="border-b hover:bg-amber-50 transition">
-                    <td className="py-4 px-6">Intermediate Hindi Course</td>
-                    <td className="py-4 px-6">12 Weeks</td>
-                    <td className="py-4 px-6">240 Class Instructions</td>
-                  </tr>
-                  <tr className="hover:bg-amber-50 transition">
-                    <td className="py-4 px-6">Intensive Hindi Course</td>
-                    <td className="py-4 px-6">6 Weeks</td>
-                    <td className="py-4 px-6">120 Class Instructions</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          {/* Other Languages */}
-          <div className="bg-gradient-to-r from-amber-50 to-orange-50 p-8 rounded-lg shadow-lg">
-            <h3 className="text-3xl font-semibold mb-6 text-gray-800">🌐 Other Languages</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-              <div className="bg-white p-4 rounded-lg text-center shadow hover:shadow-lg transition">
-                <p className="text-xl font-semibold text-amber-800">Urdu</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg text-center shadow hover:shadow-lg transition">
-                <p className="text-xl font-semibold text-amber-800">Garhwali</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg text-center shadow hover:shadow-lg transition">
-                <p className="text-xl font-semibold text-amber-800">Punjabi</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg text-center shadow hover:shadow-lg transition">
-                <p className="text-xl font-semibold text-amber-800">Sanskrit</p>
-              </div>
-            </div>
-            <p className="text-gray-700 text-center italic">Short-term courses customized to your needs are also available (minimum 2 weeks).</p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link 
+              href="/contact" 
+              className="bg-white text-amber-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-amber-50 transition-all transform hover:scale-105 shadow-2xl"
+            >
+              Get In Touch
+            </Link>
+            <Link 
+              href="/fees" 
+              className="bg-amber-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-amber-950 transition-all transform hover:scale-105 shadow-2xl border-2 border-white/30"
+            >
+              View Pricing
+            </Link>
           </div>
         </div>
       </section>
-
-      {/* Schedule Section */}
-      <section id="schedule" className="py-16 bg-amber-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 text-amber-900">🗓️ School Term & Schedule</h2>
-          
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            {/* Winter Break */}
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Winter Break 2024–2025</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>❄️ <strong>Closed:</strong> December 13, 2024 – January 31, 2025</li>
-                <li>🏫 <strong>On-Campus Classes Resume:</strong> February 3, 2025</li>
-                <li>💻 <strong>Online Classes Resume:</strong> January 13, 2025</li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Winter Break 2025–2026</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>❄️ <strong>Closed from:</strong> December 12, 2025</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Daily Schedule */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Daily Schedule</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>⏱️ <strong>Class Duration:</strong> 50 minutes</li>
-                <li>🕐 <strong>Timings:</strong> 8:20 AM – 4:50 PM (IST)</li>
-                <li>☕ <strong>Tea Break:</strong> 10:00 AM (30 minutes)</li>
-                <li>🍽️ <strong>Lunch:</strong> 12:10 PM to 1:30 PM</li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4 text-gray-800">Online Classes</h3>
-              <ul className="space-y-2 text-gray-700">
-                <li>💻 <strong>Platform:</strong> Skype or Zoom</li>
-                <li>🕐 <strong>Timings:</strong> 8:30 AM – 7:00 PM (IST)</li>
-                <li>📅 <strong>Schedule:</strong> Monday to Friday</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Enrollment Info */}
-          <div className="mt-8 bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-semibold mb-4 text-gray-800">🧾 Enrollment Information</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>📚 <strong>Full-Time:</strong> 4 teaching periods per day</li>
-              <li>⏰ <strong>Part-Time:</strong> Minimum 2 periods per day</li>
-              <li>📅 <strong>Schedule:</strong> Monday to Friday</li>
-              <li className="italic">Students are encouraged to start on Mondays and finish on Fridays. Billing is based on the scheduled timetable.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Fees Section */}
-      <section id="fees" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 text-amber-900">💰 Fees (For the Year 2025)</h2>
-          
-          <div className="overflow-x-auto shadow-lg rounded-lg mb-8">
-            <table className="min-w-full bg-white border border-gray-200">
-              <thead className="bg-amber-700 text-white">
-                <tr>
-                  <th className="py-3 px-6 text-left">Category</th>
-                  <th className="py-3 px-6 text-left">Fee</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b hover:bg-amber-50 transition">
-                  <td className="py-4 px-6">Enrolment Fee</td>
-                  <td className="py-4 px-6 font-semibold">₹1,500</td>
-                </tr>
-                <tr className="border-b hover:bg-amber-50 transition">
-                  <td className="py-4 px-6">Private Tutorials</td>
-                  <td className="py-4 px-6 font-semibold">₹1,000 per person / per lesson</td>
-                </tr>
-                <tr className="border-b hover:bg-amber-50 transition">
-                  <td className="py-4 px-6">Joint Tutorials (2 people)</td>
-                  <td className="py-4 px-6 font-semibold">₹750 per person / per lesson</td>
-                </tr>
-                <tr className="border-b hover:bg-amber-50 transition">
-                  <td className="py-4 px-6">Group (3+ persons)</td>
-                  <td className="py-4 px-6 font-semibold">₹625 per person / per lesson</td>
-                </tr>
-                <tr className="border-b hover:bg-amber-50 transition">
-                  <td className="py-4 px-6">Examination Fee</td>
-                  <td className="py-4 px-6 font-semibold">₹1,000</td>
-                </tr>
-                <tr className="hover:bg-amber-50 transition">
-                  <td className="py-4 px-6">Course Textbook (Introductory Hindi)</td>
-                  <td className="py-4 px-6 font-semibold">₹2,200</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          {/* Materials */}
-          <div className="bg-gradient-to-r from-amber-50 to-orange-50 p-6 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-semibold mb-4 text-gray-800">📚 Materials & Textbook</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>🎧 Students are encouraged to bring a tape recorder or MP3 CD player for use in class.</li>
-              <li>📖 The school&apos;s own textbook is a required component for Hindi instruction.</li>
-              <li>💿 The book includes a companion MP3 CD containing audio lessons.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Accommodation Section */}
-      <section id="accommodation" className="py-16 bg-amber-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-8 text-amber-900">🏠 Accommodation</h2>
-          <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
-            The school does not arrange accommodation. Students must make their own arrangements early—especially between May and October, when accommodation is limited.
-          </p>
-
-          <h3 className="text-3xl font-semibold mb-6 text-gray-800">Recommended Boarding Houses (Walking Distance)</h3>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Rokeby Manor */}
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-              <h4 className="text-xl font-semibold mb-3 text-amber-800">Rokeby Manor</h4>
-              <div className="space-y-2 text-gray-700 mb-3">
-                <p>📞 +91 135 2635604/05/06</p>
-                <p>📧 reservations@rokebymanor.com</p>
-                <p>🌐 <a href="http://www.rokebymanor.com" target="_blank" className="text-blue-600 hover:underline">www.rokebymanor.com</a></p>
-              </div>
-              <p className="text-sm text-gray-600 italic">5-min walk. 50% discount on rooms (min. 5 days stay), 25% off food & beverages.</p>
-            </div>
-
-            {/* Tabor Cottage */}
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-              <h4 className="text-xl font-semibold mb-3 text-amber-800">Tabor Cottage</h4>
-              <div className="space-y-2 text-gray-700 mb-3">
-                <p>📞 +91 9634443666</p>
-                <p>📧 reservations@taborcottage.com</p>
-                <p>🌐 <a href="http://www.taborcottage.com" target="_blank" className="text-blue-600 hover:underline">www.taborcottage.com</a></p>
-              </div>
-              <p className="text-sm text-gray-600 italic">5-min walk. Rooms from ₹1000/night (incl. breakfast). Special rates for long stays.</p>
-            </div>
-
-            {/* La Villa Bethany */}
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-              <h4 className="text-xl font-semibold mb-3 text-amber-800">La Villa Bethany</h4>
-              <div className="space-y-2 text-gray-700 mb-3">
-                <p>📞 +91 135 2630054 / 09910049644</p>
-                <p>📧 mail@lavillabethany.com</p>
-              </div>
-              <p className="text-sm text-gray-600 italic">5-min walk from school.</p>
-            </div>
-
-            {/* DevDar Woods */}
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-              <h4 className="text-xl font-semibold mb-3 text-amber-800">DevDar Woods</h4>
-              <div className="space-y-2 text-gray-700 mb-3">
-                <p>📞 +91 135 2632644 / 2632544</p>
-                <p>📧 anilprakash56@yahoo.com</p>
-              </div>
-              <p className="text-sm text-gray-600 italic">Located at Sister&apos;s Bazar.</p>
-            </div>
-
-            {/* Ivy Bank */}
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-              <h4 className="text-xl font-semibold mb-3 text-amber-800">Ivy Bank Guest House</h4>
-              <div className="space-y-2 text-gray-700 mb-3">
-                <p>📞 +91 135 2631433 / 09897604999</p>
-                <p>📧 ivy_bank@yahoo.co.in</p>
-                <p>🌐 <a href="http://www.ivybank.in" target="_blank" className="text-blue-600 hover:underline">www.ivybank.in</a></p>
-              </div>
-              <p className="text-sm text-gray-600 italic">10-min walk from school.</p>
-            </div>
-
-            {/* Woodside */}
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-              <h4 className="text-xl font-semibold mb-3 text-amber-800">Woodside</h4>
-              <div className="space-y-2 text-gray-700 mb-3">
-                <p>📞 +91 11 26843503 / 09811322285</p>
-                <p>📧 bhattyiz@gmail.com</p>
-              </div>
-              <p className="text-sm text-gray-600 italic">Sister&apos;s Bazaar, Landour.</p>
-            </div>
-
-            {/* See Forth Lodge */}
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-              <h4 className="text-xl font-semibold mb-3 text-amber-800">See Forth Lodge</h4>
-              <div className="space-y-2 text-gray-700 mb-3">
-                <p>📞 +91 135 2632801</p>
-                <p>📧 revinodkumarart@hotmail.com</p>
-              </div>
-              <p className="text-sm text-gray-600 italic">Near Clock Tower, Mussoorie.</p>
-            </div>
-
-            {/* Doma's Inn */}
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-              <h4 className="text-xl font-semibold mb-3 text-amber-800">Doma&apos;s Inn Guest House</h4>
-              <div className="space-y-2 text-gray-700 mb-3">
-                <p>📧 siddharth.nima@gmail.com</p>
-                <p>📧 tenzing@momotours.com</p>
-              </div>
-            </div>
-
-            {/* Elcott */}
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-              <h4 className="text-xl font-semibold mb-3 text-amber-800">Elcott</h4>
-              <div className="space-y-2 text-gray-700">
-                <p>📞 +91 135 2632301 / 011 23013188</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Clothing Advice */}
-          <div className="mt-12 bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-semibold mb-4 text-gray-800">🧥 Clothing Advice</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li>🌡️ <strong>All Seasons:</strong> Carry warm clothes (weather can turn cold anytime).</li>
-              <li>🌧️ <strong>Monsoon (June–August):</strong> Umbrella/light raincoat required.</li>
-              <li>❄️ <strong>Autumn–Winter (Sept–Dec):</strong> Heavy woolens needed.</li>
-              <li>🍂 <strong>Typical Weather (Sept–Oct):</strong> Day: 15–20°C; Nights: Quite cold.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-16 bg-gradient-to-r from-amber-600 to-orange-500 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12">📞 Contact Information</h2>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4">Address</h3>
-              <p className="text-lg">41/2 Landour Cantonment, Mussoorie</p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
-              <h3 className="text-2xl font-semibold mb-4">Get in Touch</h3>
-              <div className="space-y-2">
-                <p>📞 Phone: +91 135 2973163</p>
-                <p>📱 Mobile: +91 135 2973164</p>
-                <p>📧 Email: info@landourlanguageschool.com</p>
-                <p>🌐 Website: <a href="http://www.landourlanguageschool.com" target="_blank" className="underline hover:text-amber-200">www.landourlanguageschool.com</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-amber-900 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-lg mb-2">Landour Language School</p>
-          <p className="text-sm opacity-80">Learn Languages in the Heart of the Himalayas</p>
-          <p className="text-sm mt-4 opacity-60">© 2025 Landour Language School. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 }
